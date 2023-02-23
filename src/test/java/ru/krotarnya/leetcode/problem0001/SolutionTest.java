@@ -8,17 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import static ru.krotarnya.leetcode.utils.ArrayUtils.*;
 
 class SolutionTest {
-
     @Test
     void test() {
-        assertTrue(test(List.of(1,2,3,4,5,6,7), 3,  List.of(0,1)));
-        assertTrue(test(List.of(1,2,3,4,5,6,7), 4,  List.of(0,2)));
-        assertTrue(test(List.of(1,2,3,4,5,6,7), 5,  List.of(0,3)));
-        assertTrue(test(List.of(1,2,3,4,5,6,7), 13, List.of(5,6)));
+        assertEquals(test(List.of(1, 2), 3), List.of(0, 1));
+        assertEquals(test(List.of(3, 5, 5, 11), 10), List.of(1, 2));
+        assertEquals(test(List.of(3, 2, 4), 6), List.of(1, 2));
+        assertEquals(test(List.of(1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 7, 1, 1, 1, 1, 1), 11), List.of(5, 11));
     }
 
-    boolean test(List<Integer> input1, int input2, List<Integer> output) {
-        List<Integer> result = toList(Solution.twoSum(toIntArray(input1), input2));
-        return result.equals(output);
+    List<Integer> test(List<Integer> input1, int input2) {
+        return toList(Solution.twoSum(toIntArray(input1), input2));
     }
 }
