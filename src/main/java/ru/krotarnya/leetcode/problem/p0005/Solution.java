@@ -2,7 +2,6 @@ package ru.krotarnya.leetcode.problem.p0005;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
-import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>Given a string s, return the longest palindromic substring in s.</p>
@@ -11,7 +10,7 @@ import ru.krotarnya.leetcode.Resolution;
  * Надо бы как-нибудь всё-таки придумать что-то пооптимальнее.</p>
  */
 
-@Problem(id = 5, name = "longest-palindromic-substring", complexity = Complexity.MEDIUM, resolution = Resolution.FAIL)
+@Problem(id = 5, name = "longest-palindromic-substring", complexity = Complexity.MEDIUM)
 public class Solution {
     public static String longestPalindrome(String s) {
         if (s.length() < 2) return s;
