@@ -13,5 +13,6 @@ import java.lang.annotation.Target;
 public @interface Problem {
     int id();
     String name();
+    Complexity complexity();
     Resolution resolution() default Resolution.FAIR;
 }
