@@ -1,8 +1,11 @@
 package ru.krotarnya.leetcode.problem0009;
 
+import ru.krotarnya.leetcode.Problem;
+
 /**
  * Given an integer x, return true if x is a palindrome, and false otherwise.
  */
+@Problem(id = 9, name = "palindrome-number")
 public class Solution {
     private static boolean isPalindrome(String x) {
         boolean res = true;

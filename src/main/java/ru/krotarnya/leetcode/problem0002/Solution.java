@@ -1,13 +1,16 @@
 package ru.krotarnya.leetcode.problem0002;
 
+import ru.krotarnya.leetcode.Problem;
+
 /**
- * <p>You are given two non-empty linked lists representing two non-negative integers. 
- * The digits are stored in reverse order, and each of their nodes contains a single digit. 
- * Add the two numbers and return the sum as a linked list</p>
- * </p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+ * <p>You are given two non-empty linked lists representing two non-negative integers.</p>
+ * <p>The digits are stored in reverse order, and each of their nodes contains a single digit.</p>
+ * <p>Add the two numbers and return the sum as a linked list.</p>
+ * <p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
  */
 
 @SuppressWarnings("unused")
+@Problem(id = 2, name = "add-two-numbers")
 class Solution {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode first = new ListNode(0);

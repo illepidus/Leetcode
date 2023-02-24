@@ -3,10 +3,14 @@ package ru.krotarnya.leetcode.problem0003;
 import java.util.HashMap;
 import java.util.Map;
 
+import ru.krotarnya.leetcode.Problem;
+
 /**
  * Given a string s, find the length of the longest
  * substring without repeating characters.
  */
+
+@Problem(id = 3, name = "longest-substring-without-repeating-characters")
 class Solution {
     public static int lengthOfLongestSubstring(String s) {
         int longest = 0;

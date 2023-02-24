@@ -1,9 +1,12 @@
 package ru.krotarnya.leetcode.problem0999;
 
+import ru.krotarnya.leetcode.Problem;
+
 /**
  * @author ivblinov
  */
 @SuppressWarnings("unused")
+@Problem(id = 999, name = "available-captures-for-rook")
 public class Solution {
     public int numRookCaptures(char[][] board) {
         Location rook = findRook(board);
