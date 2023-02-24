@@ -4,10 +4,10 @@ package ru.krotarnya.leetcode;
  * @author ivblinov
  */
 public enum Resolution {
-    FAIR("Solution totally satisfy problem"), 
-    PASS("Solution is accepted by leetcode, but breaks some unchecked restrictions"),
+    FAIR("Solution totally satisfy constraints"), 
+    PASS("Solution is accepted by leetcode, but breaks some unchecked constraints"),
     TIMEOUT("Not accepted by leetcode due to timeout"),
-    PARTIAL("Solution pass some test, but not all"),
+    PARTIAL("Solution passes some test, but not all"),
     FAIL("There is no solution");
     
     private final String description;
