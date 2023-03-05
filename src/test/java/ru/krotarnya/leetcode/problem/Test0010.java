@@ -1,13 +1,10 @@
-package ru.krotarnya.leetcode.problem.p0010;
+package ru.krotarnya.leetcode.problem;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.krotarnya.leetcode.problem.p0010.Solution.isMatch;
 
-/**
- * @author ivblinov
- */
 class Test0010 {
     @Test
     void test1() {
