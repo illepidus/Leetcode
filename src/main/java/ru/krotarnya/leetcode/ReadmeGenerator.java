@@ -22,14 +22,34 @@ public class ReadmeGenerator {
                 .collect(Collectors.toList());
     }
     
-    private String problemsToMarkdown(List<Problem> problems) {
+    private String problemsToHtmlTable(List<Problem> problems) {
         StringBuilder builder = new StringBuilder();
-        problems.forEach(problem -> builder.append(problemToMarkdown(problem)));
+        builder.append("""
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Complexity</td>
+                        <td>Solution</td>
+                        <td>Resolution</td>
+                    </tr>
+                """);
+        problems.forEach(problem -> builder.append(problemToHtmlRow(problem)));
+        builder.append("</table>");
         return builder.toString();
     }
 
-    private String problemToMarkdown(Problem problem) {
-        return String.format("* [Problem #%d](https://leetcode.com/problems/%s/)\n", problem.id(), problem.name());
+    private String problemToHtmlRow(Problem problem) {
+        return String.format(
+                """
+                    <tr>
+                        <td>%d</td>
+                        <td><a href="https://leetcode.com/problems/%s/">%s</a></td>
+                        <td>%s</td>
+                        <td><a href="%s">SOLUTION</a></td>
+                        <td title="%s">%s</td>
+                    </tr>
+                """, problem.id(), problem.name(), problem.name(), problem.complexity(), "", problem.resolution().description(), problem.resolution());
     }
     
     private String generateReadme() {
@@ -38,11 +58,9 @@ public class ReadmeGenerator {
         InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         BufferedReader reader = new BufferedReader(streamReader);
         return reader.lines()
-                .map(line -> line.equals("%PROBLEMS%") ? problemsToMarkdown(getProblems()) : line)
+                .map(line -> line.equals("%PROBLEMS%") ? problemsToHtmlTable(getProblems()) : line)
                 .collect(Collectors.joining("\n"));
     }
-    
-
     
     public static void main(String[] args) {
         System.out.println(new ReadmeGenerator().generateReadme());
