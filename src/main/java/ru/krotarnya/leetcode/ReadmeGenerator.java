@@ -11,9 +11,6 @@ import java.util.stream.Collectors;
 
 import org.reflections.Reflections;
 
-/**
- * @author ivblinov
- */
 public class ReadmeGenerator {
     private static final String PACKAGE_PREFIX = "ru.krotarnya.leetcode";
     

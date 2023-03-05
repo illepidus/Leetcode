@@ -3,9 +3,7 @@ package ru.krotarnya.leetcode.problem.p0999;
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
 
-/**
- * @author ivblinov
- */
+
 @SuppressWarnings("unused")
 @Problem(id = 999, name = "available-captures-for-rook", complexity = Complexity.EASY)
 public class Solution {

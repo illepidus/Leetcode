@@ -1,8 +1,6 @@
 package ru.krotarnya.leetcode.common;
 
-/**
- * @author ivblinov
- */
+
 @SuppressWarnings("unused")
 public class ListNode {
     public int val;
