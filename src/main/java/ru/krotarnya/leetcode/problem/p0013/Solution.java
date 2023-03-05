@@ -12,7 +12,7 @@ import ru.krotarnya.leetcode.Problem;
  * <p>It is guaranteed that s is a valid roman numeral in the range [1, 3999]</p>
  */
 
-@Problem(id = 13, name = "roman-to-integer", complexity = Complexity.MEDIUM)
+@Problem(id = 13, name = "roman-to-integer", complexity = Complexity.EASY)
 public class Solution {
     private static final Map<Character, Integer> ROMAN_MAP = Map.of(
             'I', 1,

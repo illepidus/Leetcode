@@ -97,7 +97,7 @@ This is mine little project created for solving leetcode problems just for lulz.
     <tr>
         <td>13</td>
         <td><a href="https://leetcode.com/problems/roman-to-integer/">roman-to-integer</a></td>
-        <td>MEDIUM</td>
+        <td>EASY</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0013/Solution.java">Solution</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
