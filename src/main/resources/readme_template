@@ -1,5 +1,14 @@
 # Leetcode
 This is mine little project created for solving leetcode problems just for lulz.
 
-## Problem list
+## Problems
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Complexity</td>
+        <td>Solution</td>
+        <td>Resolution</td>
+    </tr>
 %PROBLEMS%
+</table>
