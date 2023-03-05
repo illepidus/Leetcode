@@ -16,6 +16,7 @@ import org.reflections.Reflections;
 
 public class ReadmeGenerator {
     private static final String PACKAGE_PREFIX = "ru.krotarnya.leetcode";
+    private static final int MAX_PROBLEM_CHARACTERS_TO_DISPLAY = 30;
     
     private List<Problem> getProblems() {
         Reflections reflections = new Reflections(PACKAGE_PREFIX);
@@ -25,7 +26,7 @@ public class ReadmeGenerator {
                 .collect(Collectors.toList());
     }
     
-    private String problemsToHtmlTable(List<Problem> problems) {
+    private String problemsToHtmlRows(List<Problem> problems) {
         StringBuilder builder = new StringBuilder();
         problems.forEach(problem -> builder.append(problemToHtmlRow(problem)));
         return builder.toString();
@@ -38,12 +39,14 @@ public class ReadmeGenerator {
                         <td>%d</td>
                         <td><a href="https://leetcode.com/problems/%s/">%s</a></td>
                         <td>%s</td>
-                        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p%s/Solution.java">SOLUTION</a></td>
+                        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p%s/Solution.java">Solution</a></td>
                         <td title="%s">%s</td>
                     </tr>
                 """, 
                 problem.id(),
-                problem.name(), problem.name(),
+                problem.name(), problem.name().length() > MAX_PROBLEM_CHARACTERS_TO_DISPLAY
+                        ? problem.name().substring(0, MAX_PROBLEM_CHARACTERS_TO_DISPLAY) + "..." 
+                        : problem.name(),
                 problem.complexity(),
                 String.format("%04d", problem.id()),
                 problem.resolution().description(), problem.resolution());
@@ -55,23 +58,27 @@ public class ReadmeGenerator {
         InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         BufferedReader reader = new BufferedReader(streamReader);
         return new Readme(reader.lines()
-                .map(line -> line.equals("%PROBLEMS%") ? problemsToHtmlTable(getProblems()) : line)
+                .map(line -> line.equals("%PROBLEMS%") ? problemsToHtmlRows(getProblems()) : line)
                 .collect(Collectors.joining("\n")));
     }
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         new ReadmeGenerator().generateReadme().save();
     }
 
     private record Readme(String content) {
-        public void save() throws IOException {
+        public void save() {
             save(System.getProperty("user.dir") + "/README.MD");
         }
-        private void save(String fileName) throws IOException {
-            FileWriter fileWriter = new FileWriter(fileName);
-            PrintWriter printWriter = new PrintWriter(fileWriter);
-            printWriter.print(content);
-            printWriter.close();
+        private void save(String fileName) {
+            try (FileWriter fileWriter = new FileWriter(fileName)) {
+                PrintWriter printWriter = new PrintWriter(fileWriter);
+                printWriter.print(content);
+                printWriter.close();
+            }
+            catch (IOException e) {
+                throw new RuntimeException();
+            }
         }
     }
 }
