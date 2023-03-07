@@ -37,18 +37,18 @@ public class ReadmeGenerator {
                 """
                     <tr>
                         <td>%d</td>
-                        <td><a href="https://leetcode.com/problems/%s/">%s</a></td>
+                        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p%s/Solution.java">%s</a></td>
                         <td>%s</td>
-                        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p%s/Solution.java">Solution</a></td>
+                        <td><a href="https://leetcode.com/problems/%s/">Leetcode</a></td>
                         <td title="%s">%s</td>
                     </tr>
                 """, 
                 problem.id(),
-                problem.name(), problem.name().length() > MAX_PROBLEM_CHARACTERS_TO_DISPLAY
+                String.format("%04d", problem.id()), problem.name().length() > MAX_PROBLEM_CHARACTERS_TO_DISPLAY
                         ? problem.name().substring(0, MAX_PROBLEM_CHARACTERS_TO_DISPLAY) + "..." 
                         : problem.name(),
                 problem.complexity(),
-                String.format("%04d", problem.id()),
+                problem.name(),
                 problem.resolution().description(), problem.resolution());
     }
     
