@@ -1,32 +1,40 @@
 package ru.krotarnya.leetcode.problem;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static ru.krotarnya.leetcode.problem.p0010.Solution.isMatch;
 
 class Test0010 {
-    @Test
-    void test1() {
-        assertTrue(isMatch("", ""));
-        assertFalse(isMatch("aa", "a"));
-        assertTrue(isMatch("aa", "aa"));
-        assertFalse(isMatch("aa", "aaa"));
+    @CsvSource({
+            "a,a",
+            "a,.",
+            "a,a*",
+            "a,b*a*.*",
+            "ab,ab",
+            "ab,a*",
+            "ab,.*",
+            "ab,a.",
+            "ab,a.*b.*",
+            "ab,c*a*b*c*b",
+    })
+    @ParameterizedTest
+    void testTrue(String string, String pattern) {
+        assertTrue(isMatch(string, pattern));
+    }
+
+    @CsvSource({
+            "a,b",
+            "ab,aa",
+            "ab,ba",
+            "ab,b*a*",
+            "ab,.*b*a",
+    })
+    @ParameterizedTest
+    void testFalse(String string, String pattern) {
+        assertFalse(isMatch(string, pattern));
     }
     
-    @Test
-    void test2() {
-        assertTrue(isMatch("aa", "a*"));
-        assertFalse(isMatch("ab", "a*"));
-        assertTrue(isMatch("aa", ".*"));
-        assertFalse(isMatch("aba", "b.*"));
-    }
-    
-    @Test
-    void test3() {
-        assertTrue(isMatch("abababa", "a.*b.*a*"));
-        assertFalse(isMatch("abababa", "a.*c.*a*"));
-        assertTrue(isMatch("aab", "c*a*b"));
-        assertTrue(isMatch("aaa", "ab*ac*a"));
-    }
 }

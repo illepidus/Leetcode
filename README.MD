@@ -78,7 +78,7 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0010/Solution.java">regular-expression-matching</a></td>
         <td>HARD</td>
         <td><a href="https://leetcode.com/problems/regular-expression-matching/">Leetcode</a></td>
-        <td title="There is no solution">NONE</td>
+        <td title="Solution is accepted by leetcode, but breaks some unchecked constraints">PASS</td>
     </tr>
     <tr>
         <td>11</td>
