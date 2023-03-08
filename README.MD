@@ -26,7 +26,7 @@ This is mine little project created for solving leetcode problems just for lulz.
     </tr>
     <tr>
         <td>3</td>
-        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0003/Solution.java">longest-substring-without-repe...</a></td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0003/Solution.java">longest-substring-without-r...</a></td>
         <td>MEDIUM</td>
         <td><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">Leetcode</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>
@@ -117,7 +117,7 @@ This is mine little project created for solving leetcode problems just for lulz.
     </tr>
     <tr>
         <td>1221</td>
-        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p1221/Solution.java">split-a-string-in-balanced-str...</a></td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p1221/Solution.java">split-a-string-in-balanced-...</a></td>
         <td>EASY</td>
         <td><a href="https://leetcode.com/problems/split-a-string-in-balanced-strings/">Leetcode</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>

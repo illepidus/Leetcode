@@ -1,12 +1,12 @@
 package ru.krotarnya.leetcode;
 
 import java.io.BufferedReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -14,12 +14,20 @@ import java.util.stream.Collectors;
 
 import org.reflections.Reflections;
 
+import static ru.krotarnya.leetcode.util.StringUtils.shorten;
+
 public class ReadmeGenerator {
-    private static final String PACKAGE_PREFIX = "ru.krotarnya.leetcode";
+    private final PathProvider pathProvider;
+    private final URLProvider urlProvider;
     private static final int MAX_PROBLEM_CHARACTERS_TO_DISPLAY = 30;
-    
+
+    public ReadmeGenerator(PathProvider pathProvider, URLProvider urlProvider) {
+        this.pathProvider = pathProvider;
+        this.urlProvider = urlProvider;
+    }
+
     private List<Problem> getProblems() {
-        Reflections reflections = new Reflections(PACKAGE_PREFIX);
+        Reflections reflections = new Reflections(Problem.class.getPackage().getName());
         return reflections.getTypesAnnotatedWith(Problem.class).stream()
                 .map(clazz-> clazz.getAnnotation(Problem.class))
                 .sorted(Comparator.comparingInt(Problem::id))
@@ -37,22 +45,20 @@ public class ReadmeGenerator {
                 """
                     <tr>
                         <td>%d</td>
-                        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p%s/Solution.java">%s</a></td>
+                        <td><a href="%s">%s</a></td>
                         <td>%s</td>
-                        <td><a href="https://leetcode.com/problems/%s/">Leetcode</a></td>
+                        <td><a href="%s">Leetcode</a></td>
                         <td title="%s">%s</td>
                     </tr>
                 """, 
                 problem.id(),
-                String.format("%04d", problem.id()), problem.name().length() > MAX_PROBLEM_CHARACTERS_TO_DISPLAY
-                        ? problem.name().substring(0, MAX_PROBLEM_CHARACTERS_TO_DISPLAY) + "..." 
-                        : problem.name(),
+                urlProvider.gitHub(problem.id()), shorten(problem.name(), MAX_PROBLEM_CHARACTERS_TO_DISPLAY),
                 problem.complexity(),
-                problem.name(),
+                urlProvider.leetcode(problem.name()),
                 problem.resolution().description(), problem.resolution());
     }
     
-    private Readme generateReadme() {
+    public Readme generateReadme() {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         InputStream inputStream = Objects.requireNonNull(classloader.getResourceAsStream("readme_template"));
         InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
@@ -63,21 +69,28 @@ public class ReadmeGenerator {
     }
     
     public static void main(String[] args) {
-        new ReadmeGenerator().generateReadme().save();
+        new ReadmeGenerator(new PathProvider(), new URLProvider())
+                .generateReadme()
+                .save();
     }
 
-    private record Readme(String content) {
-        public void save() {
-            save(System.getProperty("user.dir") + "/README.MD");
+    private class Readme {
+        private final String content;
+
+        private Readme(String content) {
+            this.content = content;
         }
-        private void save(String fileName) {
-            try (FileWriter fileWriter = new FileWriter(fileName)) {
-                PrintWriter printWriter = new PrintWriter(fileWriter);
+        
+        private void save() {
+            save(pathProvider.readmePath());
+        }
+
+        private void save(Path path) {
+            try (PrintWriter printWriter = new PrintWriter(path.toFile())) {
                 printWriter.print(content);
-                printWriter.close();
             }
             catch (IOException e) {
-                throw new RuntimeException();
+                throw new RuntimeException("Failed saving readme");
             }
         }
     }
