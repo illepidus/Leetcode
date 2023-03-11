@@ -9,13 +9,13 @@ class PathProviderTest {
 
     @Test
     void projectPath() {
-        assertTrue(pathProvider.projectPath().isAbsolute());
-        assertEquals(System.getProperty("user.dir"), pathProvider.projectPath().toString());
+        assertTrue(pathProvider.project().isAbsolute());
+        assertEquals(System.getProperty("user.dir"), pathProvider.project().toString());
     }
 
     @Test
     void readmePath() {
-        assertTrue(pathProvider.readmePath().isAbsolute());
-        assertTrue(pathProvider.readmePath().toFile().exists());
+        assertTrue(pathProvider.readme().isAbsolute());
+        assertTrue(pathProvider.readme().toFile().exists());
     }
 }
