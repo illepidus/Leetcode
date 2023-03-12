@@ -3,6 +3,7 @@ package ru.krotarnya.leetcode.problem;
 import org.junit.jupiter.api.Test;
 import ru.krotarnya.leetcode.common.TreeNode;
 import ru.krotarnya.leetcode.util.ListNodeUtils;
+import ru.krotarnya.leetcode.util.TreeNodeUtils;
 
 import static ru.krotarnya.leetcode.problem.p0109.Solution.sortedListToBST;
 
@@ -13,6 +14,6 @@ public class Test0109 {
     
     @Test
     void test() {
-        System.out.println(sortedListToBST(ListNodeUtils.from(0,1,2,3,4,5,6,7,8,9,10)));
+        System.out.println(TreeNodeUtils.toString(sortedListToBST(ListNodeUtils.from(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10))));
     }
 }
