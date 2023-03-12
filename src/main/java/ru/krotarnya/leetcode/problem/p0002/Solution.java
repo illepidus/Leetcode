@@ -13,7 +13,7 @@ import ru.krotarnya.leetcode.common.ListNode;
 
 @SuppressWarnings("unused")
 @Problem(id = 2, name = "add-two-numbers", complexity = Complexity.MEDIUM)
-class Solution {
+public class Solution {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode first = new ListNode(0);
         ListNode prev = first;

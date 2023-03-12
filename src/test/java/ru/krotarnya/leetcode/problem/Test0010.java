@@ -14,7 +14,6 @@ class Test0010 {
             "a,a*",
             "a,b*a*.*",
             "ab,ab",
-            "ab,a*",
             "ab,.*",
             "ab,a.",
             "ab,a.*b.*",

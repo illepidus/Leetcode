@@ -3,7 +3,6 @@ package ru.krotarnya.leetcode.problem;
 import java.util.List;
 import java.util.Set;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -41,7 +40,7 @@ public class Test0022 {
         assertEquals(generateParenthesisRecursive(n), generateParenthesisPrecalculated(n));
     }
     
-    @Test
+    @SuppressWarnings("unused")
     void generateStatic() {
         for (int i = 1; i <= 8; i++) {
             System.out.printf("            %d, List.of(\"%s\"),\n", i, String.join("\", \"", generateParenthesisRecursive(i)));
