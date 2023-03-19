@@ -5,13 +5,13 @@ import java.util.Set;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import ru.krotarnya.leetcode.problem.p0022.Solution;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static ru.krotarnya.leetcode.problem.p0022.Solution.generateParenthesisPrecalculated;
 import static ru.krotarnya.leetcode.problem.p0022.Solution.generateParenthesisRecursive;
-import static ru.krotarnya.leetcode.problem.p0022.Solution.validateParenthesis;
 
 public class Test0022 {
     @ValueSource(strings = {"", "()", "()()", "(())"})
@@ -39,11 +39,8 @@ public class Test0022 {
     void generateParenthesisPrecalculatedTest(int n) {
         assertEquals(generateParenthesisRecursive(n), generateParenthesisPrecalculated(n));
     }
-    
-    @SuppressWarnings("unused")
-    void generateStatic() {
-        for (int i = 1; i <= 8; i++) {
-            System.out.printf("            %d, List.of(\"%s\"),\n", i, String.join("\", \"", generateParenthesisRecursive(i)));
-        }
+
+    boolean validateParenthesis(String s) {
+        return Solution.validateParenthesis(s.toCharArray());
     }
 }

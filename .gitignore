@@ -1,9 +1,10 @@
 .idea/
 .gradle/
 build/
+/out/
 
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-src/test/java/ru/krotarnya/QuickTest.java
+/src/test/java/ru/krotarnya/leetcode/QuickTest.java

@@ -2,6 +2,7 @@ package ru.krotarnya.leetcode.util;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,8 @@ import ru.krotarnya.leetcode.common.TreeNode;
 
 public class TreeNodeUtils {
     public static List<Integer> toList(TreeNode node, Order order) {
+        if (Objects.isNull(node)) return List.of();
+        
         return switch (order) {
             case PRE_ORDER -> toListPreOrder(node);
             case IN_ORDER -> toListInOrder(node);
@@ -21,10 +24,10 @@ public class TreeNodeUtils {
     }
     
     public static String toString(TreeNode node) {
-        return toMap(node)
-                .values()
-                .stream()
-                .map(List::toString)
+        return toMap(node).entrySet().stream()
+                .sorted(Comparator.comparingInt(Map.Entry::getKey))
+                .map(Map.Entry::getValue)
+                .map(TreeNodeUtils::toString)
                 .collect(Collectors.joining("\n"));
     }
     
@@ -50,13 +53,36 @@ public class TreeNodeUtils {
         return map;
     }
 
+    public static int size(TreeNode treeNode) {
+        return toListPostOrder(treeNode).size();
+    }
+
     public static int depth(TreeNode node) {
         if (node == null) return 0;
         return depth(node, 1);
     }
+    
+    public static boolean isBinarySearchTree(TreeNode node) {
+        List<Integer> list = toList(node, Order.IN_ORDER);
+        return list.equals(
+                list.stream()
+                        .sorted(Comparator.comparingInt(Integer::intValue))
+                        .toList());
+    }
+
+    public static boolean isBalanced(TreeNode node) {
+        return toMap(node).entrySet().stream()
+                .sorted(Comparator.comparingInt(Map.Entry::getKey))
+                .map(Map.Entry::getValue)
+                .limit(Math.max(0, depth(node) - 1))
+                .flatMap(List::stream)
+                .map(Objects::nonNull)
+                .reduce(true, (a, b) -> a && b);
+    }
 
     private static List<Integer> toListPreOrder(TreeNode node) {
         List<Integer> list = new ArrayList<>();
+        if (Objects.isNull(node)) return list;
         list.add(node.val);
         if (Objects.nonNull(node.left)) list.addAll(toListPreOrder(node.left));
         if (Objects.nonNull(node.right)) list.addAll(toListPreOrder(node.right));
@@ -65,6 +91,7 @@ public class TreeNodeUtils {
     
     private static List<Integer> toListInOrder(TreeNode node) {
         List<Integer> list = new ArrayList<>();
+        if (Objects.isNull(node)) return list;
         if (Objects.nonNull(node.left)) list.addAll(toListInOrder(node.left));
         list.add(node.val);
         if (Objects.nonNull(node.right)) list.addAll(toListInOrder(node.right));
@@ -73,6 +100,7 @@ public class TreeNodeUtils {
 
     private static List<Integer> toListPostOrder(TreeNode node) {
         List<Integer> list = new ArrayList<>();
+        if (Objects.isNull(node)) return list;
         if (Objects.nonNull(node.left)) list.addAll(toListPostOrder(node.left));
         if (Objects.nonNull(node.right)) list.addAll(toListPostOrder(node.right));
         list.add(node.val);
@@ -84,7 +112,7 @@ public class TreeNodeUtils {
             throw new IllegalArgumentException("Bad subnode address [" + level + "; " + position + "]");
         
         for (int i = 0; i < level; i++) {
-            node = ((position & 1) == 0)
+            node = ((position & 1) == 0) 
                     ? node.left
                     : node.right;
 
@@ -98,9 +126,9 @@ public class TreeNodeUtils {
     }
 
     private static List<Integer> toListNaturalOrder(TreeNode node) {
-        return toMap(node)
-                .values()
-                .stream()
+        return toMap(node).entrySet().stream()
+                .sorted(Comparator.comparingInt(Map.Entry::getKey))
+                .map(Map.Entry::getValue)
                 .flatMap(Collection::stream)
                 .toList();
     }
@@ -122,8 +150,12 @@ public class TreeNodeUtils {
         return position < limit;
     }
     
-    
-    
+    private static String toString(List<Integer> list) {
+        return list.stream()
+                .map(value -> Objects.isNull(value) ? "_" : value.toString())
+                .collect(Collectors.joining(" "));
+    }
+
     public enum Order {
         PRE_ORDER, IN_ORDER, POST_ORDER, NATURAL_ORDER
     }

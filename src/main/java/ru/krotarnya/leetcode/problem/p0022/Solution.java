@@ -65,8 +65,11 @@ public class Solution {
         }
         return (sum == 0);
     }
-    
-    public static boolean validateParenthesis(String s) {
-        return validateParenthesis(s.toCharArray());
+
+    @SuppressWarnings("unused")
+    void generateStatic() {
+        for (int i = 1; i <= 8; i++) {
+            System.out.printf("            %d, List.of(\"%s\"),\n", i, String.join("\", \"", generateParenthesisRecursive(i)));
+        }
     }
 }
