@@ -117,7 +117,7 @@ This is mine little project created for solving leetcode problems just for lulz.
     </tr>
     <tr>
         <td>211</td>
-        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0211/Solution.java">design-add-and-search-words...</a></td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0211/WordDictionary.java">design-add-and-search-words...</a></td>
         <td>MEDIUM</td>
         <td><a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/">Leetcode</a></td>
         <td title="Not accepted by leetcode due to timeout">TIMEOUT</td>

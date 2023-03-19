@@ -23,7 +23,7 @@ public class ReadmeGenerator {
     private List<Problem> getProblems() {
         Reflections reflections = new Reflections(Problem.class.getPackage().getName());
         return reflections.getTypesAnnotatedWith(Problem.class).stream()
-                .map(clazz-> clazz.getAnnotation(Problem.class))
+                .map(clazz -> clazz.getAnnotation(Problem.class))
                 .sorted(Comparator.comparingInt(Problem::id))
                 .collect(Collectors.toList());
     }
@@ -46,7 +46,7 @@ public class ReadmeGenerator {
                     </tr>
                 """,
                 problem.id(),
-                urlProvider.gitHub(problem.id()), shorten(problem.name(), MAX_PROBLEM_CHARACTERS_TO_DISPLAY),
+                urlProvider.gitHub(problem.id(), problem.className()), shorten(problem.name(), MAX_PROBLEM_CHARACTERS_TO_DISPLAY),
                 problem.complexity(),
                 urlProvider.leetcode(problem.name()),
                 problem.resolution().description(), problem.resolution());
