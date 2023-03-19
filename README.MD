@@ -116,6 +116,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>211</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0211/Solution.java">design-add-and-search-words...</a></td>
+        <td>MEDIUM</td>
+        <td><a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/">Leetcode</a></td>
+        <td title="Not accepted by leetcode due to timeout">TIMEOUT</td>
+    </tr>
+    <tr>
         <td>999</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0999/Solution.java">available-captures-for-rook</a></td>
         <td>EASY</td>

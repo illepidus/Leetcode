@@ -1,7 +1,8 @@
-.idea/
-.gradle/
-build/
-/out/
+/.idea
+/.gradle
+/gradle
+/build
+/out
 
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
