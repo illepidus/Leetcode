@@ -136,5 +136,12 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td><a href="https://leetcode.com/problems/split-a-string-in-balanced-strings/">Leetcode</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
+    <tr>
+        <td>2241</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p2241/Solution.java">design-an-atm-machine</a></td>
+        <td>MEDIUM</td>
+        <td><a href="https://leetcode.com/problems/design-an-atm-machine/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
 
 </table>
