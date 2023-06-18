@@ -109,6 +109,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>38</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0038/Solution.java">count-and-say</a></td>
+        <td>MEDIUM</td>
+        <td><a href="https://leetcode.com/problems/count-and-say/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>109</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0109/Solution.java">convert-sorted-list-to-bina...</a></td>
         <td>MEDIUM</td>
