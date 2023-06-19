@@ -8,9 +8,12 @@ import ru.krotarnya.leetcode.Problem;
 
 @Problem(id = 38, name = "count-and-say", complexity = Complexity.MEDIUM)
 public class Solution {
-    private final static List<String> RESULTS = new ArrayList<>(List.of("1"));
-    
-    public String countAndSay(int n) {
+    private static final List<String> RESULTS = new ArrayList<>(List.of("1"));
+    private final static int MIN_INPUT_CONSTRICTION = 1;
+    private final static int MAX_INPUT_CONSTRICTION = 30;
+
+    public synchronized String countAndSay(int n) {
+        if ((n < MIN_INPUT_CONSTRICTION) || (n > MAX_INPUT_CONSTRICTION))  throw new IllegalArgumentException();
         if (n <= RESULTS.size()) return RESULTS.get(n - 1);
         return countAndSay(RESULTS.get(RESULTS.size() - 1), RESULTS.size(), n);
     }
@@ -36,5 +39,10 @@ public class Solution {
         result.append(Integer.valueOf(n)).append(c);
         RESULTS.add(result.toString());
         return result.toString();
+    }
+    
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "[" + RESULTS.size() + "]";
     }
 }
