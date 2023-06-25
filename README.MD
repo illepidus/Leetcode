@@ -144,6 +144,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>1117</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p1117/Solution.java">building-h2o</a></td>
+        <td>MEDIUM</td>
+        <td><a href="https://leetcode.com/problems/building-h2o/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>1221</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p1221/Solution.java">split-a-string-in-balanced-...</a></td>
         <td>EASY</td>
