@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
 
-@Problem(id = 1117, name = "building-h2o", className = "H20", complexity = Complexity.MEDIUM)
+@Problem(id = 1117, name = "building-h2o", className = "H2O", complexity = Complexity.MEDIUM)
 public class H2O {
     private final Semaphore oSemaphore = new Semaphore(1);
     private final Semaphore hSemaphore = new Semaphore(2);

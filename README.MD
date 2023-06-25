@@ -145,7 +145,7 @@ This is mine little project created for solving leetcode problems just for lulz.
     </tr>
     <tr>
         <td>1117</td>
-        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p1117/H20.java">building-h2o</a></td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p1117/H2O.java">building-h2o</a></td>
         <td>MEDIUM</td>
         <td><a href="https://leetcode.com/problems/building-h2o/">Leetcode</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>
