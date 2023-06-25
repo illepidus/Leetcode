@@ -17,7 +17,7 @@ import ru.krotarnya.leetcode.Problem;
  * int[] param_2 = obj.withdraw(amount);
  */
 
-@Problem(id = 2241, name = "design-an-atm-machine", complexity = Complexity.MEDIUM)
+@Problem(id = 2241, name = "design-an-atm-machine", className = "ATM", complexity = Complexity.MEDIUM)
 public class ATM {
     private static final int[] REJECTED = new int[]{-1};
     private final Map<Banknote, Long> state;
