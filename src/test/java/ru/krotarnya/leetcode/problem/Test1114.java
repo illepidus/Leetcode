@@ -18,7 +18,7 @@ public class Test1114 {
             2, () -> FOO.second(() -> RESULT.add(2)),
             3, () -> FOO.third(() -> RESULT.add(3))
     );
-    
+
     @CsvSource({"1, 2, 3", "1, 3, 2", "2, 1, 3", "2, 3, 1", "3, 1, 2", "3, 2, 1"})
     @ParameterizedTest
     void test(int _1, int _2, int _3) throws InterruptedException {

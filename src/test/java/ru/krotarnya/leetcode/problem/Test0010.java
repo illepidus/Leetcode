@@ -35,5 +35,5 @@ class Test0010 {
     void testFalse(String string, String pattern) {
         assertFalse(isMatch(string, pattern));
     }
-    
+
 }

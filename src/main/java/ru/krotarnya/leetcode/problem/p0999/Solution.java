@@ -10,7 +10,7 @@ public class Solution {
     public int numRookCaptures(char[][] board) {
         Location rook = findRook(board);
         int capture = 0;
-        
+
         for (int i = rook.x; i >= 0; i--) {
             char c = board[i][rook.y];
             if (c == 'B') break;
@@ -46,10 +46,10 @@ public class Solution {
                 break;
             }
         }
-        
+
         return capture;
     }
-    
+
     private Location findRook(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
@@ -58,6 +58,6 @@ public class Solution {
         }
         return new Location(0, 0);
     }
-    
-    private record Location(int x, int y) {} 
+
+    private record Location(int x, int y) {}
 }

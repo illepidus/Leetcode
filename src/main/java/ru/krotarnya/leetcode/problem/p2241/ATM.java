@@ -21,6 +21,7 @@ import ru.krotarnya.leetcode.Problem;
 public class ATM {
     private static final int[] REJECTED = new int[]{-1};
     private final Map<Banknote, Long> state;
+
     public ATM() {
         state = new HashMap<>();
     }
@@ -43,12 +44,12 @@ public class ATM {
                     return new Banknotes(entry.getKey(), banknotes);
                 })
                 .toList();
-        
+
         if (debt.get() != 0) return REJECTED;
 
         //noinspection DataFlowIssue
         withdraw.forEach(banknotes -> state.compute(banknotes.banknote, (k, v) -> v - banknotes.amount()));
-        
+
         return withdraw.stream()
                 .sorted(Comparator.comparingInt(banknotes -> banknotes.banknote.order))
                 .mapToInt(banknotes -> banknotes.amount.intValue())
@@ -63,9 +64,9 @@ public class ATM {
                 state.entrySet().stream().sorted(Comparator.comparingInt(e -> e.getKey().order)).toList() +
                 "]";
     }
-    
-    private record Banknotes(Banknote banknote, Long amount){}
-    
+
+    private record Banknotes(Banknote banknote, Long amount) {}
+
     public enum Banknote {
         _20(20, 0),
         _50(50, 1),
@@ -74,6 +75,7 @@ public class ATM {
         _500(500, 4);
         public final int value;
         public final int order;
+
         Banknote(int value, int order) {
             this.value = value;
             this.order = order;

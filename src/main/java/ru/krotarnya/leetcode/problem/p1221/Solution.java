@@ -14,7 +14,7 @@ public class Solution {
     public static int balancedStringSplit(String s) {
         int balance = 0;
         int result = 0;
-        for (char c: s.toCharArray()) {
+        for (char c : s.toCharArray()) {
             if (c == 'L') balance--;
             if (c == 'R') balance++;
             if (balance == 0) result++;

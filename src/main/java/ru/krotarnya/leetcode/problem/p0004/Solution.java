@@ -19,7 +19,7 @@ public class Solution {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         return findMedianSortedArrays2(nums1, nums2);
     }
-    
+
     public static double findMedianSortedArrays1(int[] nums1, int[] nums2) {
         return findMedianSortedArray(IntStream.concat(Arrays.stream(nums1), Arrays.stream(nums2)).sorted().toArray());
     }
@@ -30,14 +30,13 @@ public class Solution {
         int j = 0;
         int current = Integer.MIN_VALUE;
         int previous = Integer.MIN_VALUE;
-        
+
         for (int k = 0; k <= size / 2; k++) {
             previous = current;
             if ((j == nums2.length) || (i < nums1.length && nums1[i] <= nums2[j])) {
                 current = nums1[i];
                 i++;
-            } 
-            else {
+            } else {
                 current = nums2[j];
                 j++;
             }
@@ -47,10 +46,10 @@ public class Solution {
         else
             return current;
     }
-    
+
     private static double findMedianSortedArray(int[] nums) {
         if (nums.length % 2 == 0) {
-            return (nums[nums.length / 2 - 1] + nums[nums.length / 2]) / 2.0; 
+            return (nums[nums.length / 2 - 1] + nums[nums.length / 2]) / 2.0;
         }
         return nums[nums.length / 2];
     }

@@ -15,14 +15,14 @@ class Test0008 {
         assertEquals(0, myAtoi("a+10000dz"));
         assertEquals(0, myAtoi("a10000"));
     }
-    
+
     @Test
     void test1() {
-        assertEquals(10000,  myAtoi("10000"));
+        assertEquals(10000, myAtoi("10000"));
         assertEquals(-10000, myAtoi("-10000"));
-        assertEquals(10000,  myAtoi("+10000"));
-        assertEquals(10000,  myAtoi(" 10000"));
-        assertEquals(10000,  myAtoi(" 10000dz"));
+        assertEquals(10000, myAtoi("+10000"));
+        assertEquals(10000, myAtoi(" 10000"));
+        assertEquals(10000, myAtoi(" 10000dz"));
         assertEquals(-10000, myAtoi(" -10000dz"));
     }
 

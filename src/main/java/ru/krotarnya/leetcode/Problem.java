@@ -10,8 +10,12 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface Problem {
     int id();
+
     String name();
+
     Complexity complexity();
+
     Resolution resolution() default Resolution.FAIR;
+
     String className() default "Solution";
 }

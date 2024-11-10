@@ -44,7 +44,7 @@ class Test0004 {
         int[] nums2 = {2};
         assertEquals(findMedianSortedArrays1(nums1, nums2), findMedianSortedArrays2(nums1, nums2));
     }
-    
+
     @Test
     void testOdd1() {
         int[] nums1 = {-1};
@@ -65,14 +65,14 @@ class Test0004 {
         int[] nums2 = {2};
         assertEquals(findMedianSortedArrays1(nums1, nums2), findMedianSortedArrays2(nums1, nums2));
     }
-    
+
     @Test
     void testOdd4() {
         int[] nums1 = {1, 2, 3, 4};
         int[] nums2 = {5, 6, 7, 8, 9};
         assertEquals(findMedianSortedArrays1(nums1, nums2), findMedianSortedArrays2(nums1, nums2));
     }
-    
+
     @Test
     void testOdd5() {
         int[] nums1 = {1, 2, 4, 7};

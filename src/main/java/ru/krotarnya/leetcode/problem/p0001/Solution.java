@@ -16,7 +16,7 @@ public class Solution {
     public static int[] twoSum(int[] nums, int target) {
         return solution2(nums, target);
     }
-    
+
     @SuppressWarnings("unused")
     public static int[] solution1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {

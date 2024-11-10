@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Test0038 {
     private static final Solution SOLUTION = new Solution();
+
     @CsvSource({
             "1,  1",
             "2,  11",
@@ -33,13 +34,13 @@ public class Test0038 {
     void testResult(Integer n, String expected) {
         assertEquals(expected, SOLUTION.countAndSay(n));
     }
-    
+
     @Test
     void testThrows() {
         assertThrows(IllegalArgumentException.class, () -> SOLUTION.countAndSay(0));
         assertThrows(IllegalArgumentException.class, () -> SOLUTION.countAndSay(31));
     }
-    
+
     @Test
     void testToString() {
         assertTrue(SOLUTION.toString().matches("Solution\\[\\d+]"));

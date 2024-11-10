@@ -28,18 +28,18 @@ public class Solution {
     public static String convert(String s, int numRows) {
         if (numRows < 2) return s;
         Map<Integer, StringBuilder> map = new HashMap<>(numRows);
-        
+
         int row = 0;
         int step = 1;
         for (int i = 0; i < s.length(); i++) {
             map.putIfAbsent(row, new StringBuilder());
             map.get(row).append(s.charAt(i));
-            
+
             if (row >= numRows - 1) step = -1;
             if (row <= 0) step = 1;
             row += step;
         }
-        
+
         return map.entrySet()
                 .stream()
                 .sorted(Comparator.comparingInt(Map.Entry::getKey))

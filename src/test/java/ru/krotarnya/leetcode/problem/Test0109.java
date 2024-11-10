@@ -21,7 +21,7 @@ public class Test0109 {
     void test(int size) {
         test(Stream.iterate(1, i -> i + 1).limit(size).toList());
     }
-    
+
     void test(List<Integer> list) {
         ListNode listNode = ListNodeUtils.from(list);
         List<Integer> expected = ListNodeUtils.toList(listNode);

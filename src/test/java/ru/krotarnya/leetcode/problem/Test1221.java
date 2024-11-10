@@ -2,7 +2,7 @@ package ru.krotarnya.leetcode.problem;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.krotarnya.leetcode.problem.p1221.Solution.balancedStringSplit;
 
 /**

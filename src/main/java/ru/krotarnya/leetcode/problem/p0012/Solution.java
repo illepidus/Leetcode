@@ -16,13 +16,13 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
 
         update(sb, num / 1000 % 10, 'M', '?', '?');
-        update(sb, num / 100  % 10, 'C', 'D', 'M');
-        update(sb, num / 10   % 10, 'X', 'L', 'C');
-        update(sb, num / 1    % 10, 'I', 'V', 'X');
-        
+        update(sb, num / 100 % 10, 'C', 'D', 'M');
+        update(sb, num / 10 % 10, 'X', 'L', 'C');
+        update(sb, num / 1 % 10, 'I', 'V', 'X');
+
         return sb.toString();
     }
-    
+
     private static void update(StringBuilder sb, int digit, Character a, Character b, Character c) {
         switch (digit) {
             case 1 -> sb.append(a);

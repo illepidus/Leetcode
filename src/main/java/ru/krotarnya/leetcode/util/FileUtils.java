@@ -13,12 +13,11 @@ public class FileUtils {
     public static void write(Path path, String content) {
         try (PrintWriter printWriter = new PrintWriter(path.toFile())) {
             printWriter.print(content);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException("Failed saving readme");
         }
     }
-    
+
     public static List<String> readToList(Path path) {
         try {
             return readToList(path.toUri().toURL());

@@ -24,7 +24,7 @@ public class Solution {
             if (charmap.size() == i - j + 1)
                 longest = Math.max(longest, i - j + 1);
             else for (; charmap.size() != i - j + 1; j++)
-                if (charmap.get(s.charAt(j)) == 1) 
+                if (charmap.get(s.charAt(j)) == 1)
                     charmap.remove(s.charAt(j));
                 else
                     charmap.put(s.charAt(j), charmap.get(s.charAt(j)) - 1);

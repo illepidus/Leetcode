@@ -6,10 +6,11 @@ import java.util.Set;
 
 /**
  * Тут поломан контракт метода equals. Да и смысла от такой реализации немного,
- * потому что функция hash() порождает слишком много коллизий. 
+ * потому что функция hash() порождает слишком много коллизий.
  */
 public class EqualsWordDictionary implements WordDict {
     private final Set<Wildcard> dictionary;
+
     public EqualsWordDictionary() {
         dictionary = new HashSet<>();
     }

@@ -27,7 +27,7 @@ public class ReadmeGenerator {
                 .sorted(Comparator.comparingInt(Problem::id))
                 .collect(Collectors.toList());
     }
-    
+
     private String problemsToHtmlRows(List<Problem> problems) {
         StringBuilder builder = new StringBuilder();
         problems.forEach(problem -> builder.append(problemToHtmlRow(problem)));
@@ -37,27 +37,29 @@ public class ReadmeGenerator {
     private String problemToHtmlRow(Problem problem) {
         return String.format(
                 """
-                    <tr>
-                        <td>%d</td>
-                        <td><a href="%s">%s</a></td>
-                        <td>%s</td>
-                        <td><a href="%s">Leetcode</a></td>
-                        <td title="%s">%s</td>
-                    </tr>
-                """,
+                            <tr>
+                                <td>%d</td>
+                                <td><a href="%s">%s</a></td>
+                                <td>%s</td>
+                                <td><a href="%s">Leetcode</a></td>
+                                <td title="%s">%s</td>
+                            </tr>
+                        """,
                 problem.id(),
-                urlProvider.gitHub(problem.id(), problem.className()), shorten(problem.name(), MAX_PROBLEM_CHARACTERS_TO_DISPLAY),
+                urlProvider.gitHub(problem.id(), problem.className()),
+                shorten(problem.name(), MAX_PROBLEM_CHARACTERS_TO_DISPLAY),
                 problem.complexity(),
                 urlProvider.leetcode(problem.name()),
-                problem.resolution().description(), problem.resolution());
+                problem.resolution().description(),
+                problem.resolution());
     }
-    
+
     public Readme generateReadme() {
         return new Readme(
                 readToList(pathProvider.readmeTemplate())
                         .stream()
                         .map(line -> line.equals("%PROBLEMS%")
-                                ? problemsToHtmlRows(getProblems()) 
+                                ? problemsToHtmlRows(getProblems())
                                 : line
                         )
                         .collect(Collectors.joining("\n"))
@@ -76,7 +78,7 @@ public class ReadmeGenerator {
         private Readme(String content) {
             this.content = content;
         }
-        
+
         private void save() {
             write(pathProvider.readme(), content);
         }

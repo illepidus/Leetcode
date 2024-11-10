@@ -25,7 +25,7 @@ public class Test0002 {
         assertFalse(equals(from(1), from(0), from(0)));
         assertFalse(equals(from(1, 0, 0), from(5, 0), from(5, 0)));
     }
-    
+
     boolean equals(ListNode first, ListNode other1, ListNode other2) {
         return ListNodeUtils.equals(first, addTwoNumbers(other1, other2));
     }

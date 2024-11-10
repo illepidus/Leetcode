@@ -24,8 +24,7 @@ public class Solution {
             if (node.val > 9) {
                 node.val -= 10;
                 node.next = new ListNode(1);
-            }
-            else {
+            } else {
                 node.next = new ListNode(0);
             }
             prev = node;

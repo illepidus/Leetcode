@@ -23,29 +23,28 @@ public class Solution {
             'D', 500,
             'M', 1000
     );
-    
+
     public static int romanToInt(String s) {
         return romanToInt1(s);
     }
-    
+
     public static int romanToInt1(String s) {
         char[] chars = s.toCharArray();
         int out = 0;
         int max = 0;
-        
-        for (int i = s.length() - 1 ; i >= 0; i--) {
+
+        for (int i = s.length() - 1; i >= 0; i--) {
             int x = ROMAN_MAP.get(chars[i]);
 
             if (x >= max) {
                 out += x;
                 max = x;
-            }
-            else out -= x;
+            } else out -= x;
         }
-        
+
         return out;
     }
-    
+
     public static int romanToInt2(String s) {
         AtomicInteger out = new AtomicInteger(0);
         AtomicInteger max = new AtomicInteger(0);
@@ -57,12 +56,11 @@ public class Solution {
                     if (i >= max.get()) {
                         out.addAndGet(i);
                         max.set(i);
-                    }
-                    else {
+                    } else {
                         out.addAndGet(-i);
                     }
                 });
-        
+
         return out.get();
     }
 
@@ -74,7 +72,7 @@ public class Solution {
         Roman(int value) {
             this.value = value;
         }
-        
+
         public static int value(String s) {
             return Roman.valueOf(s).value;
         }

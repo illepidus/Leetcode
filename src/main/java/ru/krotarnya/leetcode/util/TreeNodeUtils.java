@@ -14,7 +14,7 @@ import ru.krotarnya.leetcode.common.TreeNode;
 public class TreeNodeUtils {
     public static List<Integer> toList(TreeNode node, Order order) {
         if (Objects.isNull(node)) return List.of();
-        
+
         return switch (order) {
             case PRE_ORDER -> toListPreOrder(node);
             case IN_ORDER -> toListInOrder(node);
@@ -22,7 +22,7 @@ public class TreeNodeUtils {
             case NATURAL_ORDER -> toListNaturalOrder(node);
         };
     }
-    
+
     public static String toString(TreeNode node) {
         return toMap(node).entrySet().stream()
                 .sorted(Comparator.comparingInt(Map.Entry::getKey))
@@ -30,13 +30,13 @@ public class TreeNodeUtils {
                 .map(TreeNodeUtils::toString)
                 .collect(Collectors.joining("\n"));
     }
-    
+
     public static Map<Integer, List<Integer>> toMap(TreeNode node) {
         Map<Integer, List<Integer>> map = new HashMap<>();
 
         for (int level = 0; level < depth(node); level++) {
             List<Integer> list = new ArrayList<>();
-            
+
             int limit = 1;
             for (int i = 0; i < level; i++) limit *= 2;
 
@@ -61,7 +61,7 @@ public class TreeNodeUtils {
         if (node == null) return 0;
         return depth(node, 1);
     }
-    
+
     public static boolean isBinarySearchTree(TreeNode node) {
         List<Integer> list = toList(node, Order.IN_ORDER);
         return list.equals(
@@ -88,7 +88,7 @@ public class TreeNodeUtils {
         if (Objects.nonNull(node.right)) list.addAll(toListPreOrder(node.right));
         return list;
     }
-    
+
     private static List<Integer> toListInOrder(TreeNode node) {
         List<Integer> list = new ArrayList<>();
         if (Objects.isNull(node)) return list;
@@ -110,9 +110,9 @@ public class TreeNodeUtils {
     public static TreeNode subnode(TreeNode node, int level, int position) {
         if (!subnodeAddressValid(level, position))
             throw new IllegalArgumentException("Bad subnode address [" + level + "; " + position + "]");
-        
+
         for (int i = 0; i < level; i++) {
-            node = ((position & 1) == 0) 
+            node = ((position & 1) == 0)
                     ? node.left
                     : node.right;
 
@@ -136,7 +136,7 @@ public class TreeNodeUtils {
     private static int depth(TreeNode node, int currentLevel) {
         int maxLevel = currentLevel;
         if (Objects.nonNull(node.left)) maxLevel = Math.max(maxLevel, depth(node.left, currentLevel + 1));
-        if (Objects.nonNull(node.right)) maxLevel = Math.max(maxLevel, depth(node. right, currentLevel + 1));
+        if (Objects.nonNull(node.right)) maxLevel = Math.max(maxLevel, depth(node.right, currentLevel + 1));
         return maxLevel;
     }
 
@@ -149,7 +149,7 @@ public class TreeNodeUtils {
 
         return position < limit;
     }
-    
+
     private static String toString(List<Integer> list) {
         return list.stream()
                 .map(value -> Objects.isNull(value) ? "_" : value.toString())

@@ -33,7 +33,7 @@ public class Test0211 {
             throw new RuntimeException(e);
         }
     }
-    
+
     <T extends WordDict> void quickTest(T wordDict) {
         wordDict.addWord("bad");
         wordDict.addWord("dad");

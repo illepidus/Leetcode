@@ -9,6 +9,7 @@ import ru.krotarnya.leetcode.Problem;
 public class H2O {
     private final Semaphore oSemaphore = new Semaphore(1);
     private final Semaphore hSemaphore = new Semaphore(2);
+
     public H2O() {
 
     }

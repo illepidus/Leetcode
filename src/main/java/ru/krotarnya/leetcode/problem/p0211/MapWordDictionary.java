@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class MapWordDictionary implements WordDict {
     private final Map<Integer, Set<String>> dictionary;
-    
+
     public MapWordDictionary() {
         dictionary = new HashMap<>();
     }
@@ -17,8 +17,7 @@ public class MapWordDictionary implements WordDict {
     public void addWord(String word) {
         if (dictionary.containsKey(word.length())) {
             dictionary.get(word.length()).add(word);
-        }
-        else {
+        } else {
             HashSet<String> set = new HashSet<>();
             set.add(word);
             dictionary.put(word.length(), set);

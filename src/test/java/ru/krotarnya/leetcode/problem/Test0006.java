@@ -15,7 +15,7 @@ class Test0006 {
         assertEquals("AB", convert("AB", 1));
         assertEquals("ABC", convert("ABC", 1));
     }
-    
+
     @Test
     void test3() {
         assertEquals("PAHNAPLSIIGYIR", convert("PAYPALISHIRING", 3));

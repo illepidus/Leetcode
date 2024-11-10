@@ -18,7 +18,7 @@ class Test0005 {
     void test0() {
         assertEquals("", longestPalindrome(""));
     }
-    
+
     @Test
     void test1() {
         assertEquals("a", longestPalindrome("a"));
@@ -34,7 +34,7 @@ class Test0005 {
         assertEquals("bab", longestPalindrome("bab"));
         assertEquals("aa", longestPalindrome("baa"));
     }
-    
+
     @Test
     void test4() {
         assertEquals("bb", longestPalindrome("cbbd"));
@@ -47,7 +47,7 @@ class Test0005 {
         assertEquals("zccz", longestPalindrome("zcczs"));
         assertEquals("zcacz", longestPalindrome("zcacz"));
     }
-    
+
     @Test
     void isPalindromeTest() {
         assertTrue(isPalindrome(""));
@@ -58,7 +58,7 @@ class Test0005 {
         assertTrue(isPalindrome("abcba"));
         assertTrue(isPalindrome("abccba"));
         assertTrue(isPalindrome("abcdcba"));
-        
+
         assertFalse(isPalindrome("ab"));
         assertFalse(isPalindrome("aab"));
         assertFalse(isPalindrome("abab"));

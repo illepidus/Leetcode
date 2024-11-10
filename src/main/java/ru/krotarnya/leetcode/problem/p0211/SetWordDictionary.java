@@ -5,6 +5,7 @@ import java.util.Set;
 
 public class SetWordDictionary implements WordDict {
     private final Set<String> dictionary;
+
     public SetWordDictionary() {
         dictionary = new HashSet<>();
     }
