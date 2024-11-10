@@ -3,11 +3,6 @@ package ru.krotarnya.leetcode.problem.p0704;
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
 
-/**
- * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
- * Constraints: 1 <= n <= 8
- */
-
 @Problem(id = 704, name = "binary-search", complexity = Complexity.EASY)
 public class Solution {
     public int search(int[] nums, int target) {
