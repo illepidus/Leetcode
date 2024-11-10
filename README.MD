@@ -123,6 +123,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>121</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0121/Solution.java">best-time-to-buy-and-sell-s...</a></td>
+        <td>EASY</td>
+        <td><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>136</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0136/Solution.java">single-number</a></td>
         <td>EASY</td>
