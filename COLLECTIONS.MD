@@ -4,14 +4,14 @@
 | LinkedList           | O(1) | O(1)   | O(n) | O(n)     | O(1) | Linked List    |
 | CopyOnWriteArrayList | O(n) | O(n)   | O(1) | O(n)     | O(1) | Array          |
 
-| Set                   | Add      | Remove   | Contains | Next     | Size | Data Structure           |
-|-----------------------|----------|----------|----------|----------|------|--------------------------|
-| HashSet               | O(1)     | O(1)     | O(1)     | O(h/n)   | O(1) | Hash Table               |
-| LinkedHashSet         | O(1)     | O(1)     | O(1)     | O(1)     | O(1) | Hash Table + Linked List |
-| EnumSet               | O(1)     | O(1)     | O(1)     | O(1)     | O(1) | Bit Vector               |
-| TreeSet               | O(log n) | O(log n) | O(log n) | O(log n) | O(1) | Red-black tree           |
-| CopyOnWriteArraySet   | O(n)     | O(n)     | O(n)     | O(1)     | O(1) | Array                    |
-| ConcurrentSkipListSet | O(log n) | O(log n) | O(log n) | O(1)     | O(n) | Skip List                |
+| Set                   | Add      | Remove   | Contains | Size | Data Structure           |
+|-----------------------|----------|----------|----------|------|--------------------------|
+| HashSet               | O(1)     | O(1)     | O(1)     | O(1) | Hash Table               |
+| LinkedHashSet         | O(1)     | O(1)     | O(1)     | O(1) | Hash Table + Linked List |
+| EnumSet               | O(1)     | O(1)     | O(1)     | O(1) | Bit Vector               |
+| TreeSet               | O(log n) | O(log n) | O(log n) | O(1) | Red-black tree           |
+| CopyOnWriteArraySet   | O(n)     | O(n)     | O(n)     | O(1) | Array                    |
+| ConcurrentSkipListSet | O(log n) | O(log n) | O(log n) | O(n) | Skip List                |
 
 | Queue                   | Offer    | Peak | Poll     | Remove | Size | Data Structure |
 |-------------------------|----------|------|----------|--------|------|----------------|
