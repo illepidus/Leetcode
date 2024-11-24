@@ -5,8 +5,9 @@ import java.util.List;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
-@Problem(id = 38, name = "count-and-say", complexity = Complexity.MEDIUM)
+@Problem(id = 38, name = "count-and-say", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     private static final List<String> RESULTS = new ArrayList<>(List.of("1"));
     private final static int MIN_INPUT_CONSTRICTION = 1;
@@ -15,7 +16,7 @@ public class Solution {
     public synchronized String countAndSay(int n) {
         if ((n < MIN_INPUT_CONSTRICTION) || (n > MAX_INPUT_CONSTRICTION)) throw new IllegalArgumentException();
         if (n <= RESULTS.size()) return RESULTS.get(n - 1);
-        return countAndSay(RESULTS.get(RESULTS.size() - 1), RESULTS.size(), n);
+        return countAndSay(RESULTS.getLast(), RESULTS.size(), n);
     }
 
     private String countAndSay(String input, int i, int n) {

@@ -6,6 +6,7 @@ import java.util.Map;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:</p>
@@ -18,7 +19,7 @@ import ru.krotarnya.leetcode.Problem;
  * <p>Write the code that will take a string and make this conversion given a number of rows:</p>
  */
 
-@Problem(id = 6, name = "zigzag-conversion", complexity = Complexity.MEDIUM)
+@Problem(id = 6, name = "zigzag-conversion", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     /**
      * Даже не спрашивайте зачем тут мапы, стрингбилдер и стримы.

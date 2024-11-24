@@ -4,8 +4,13 @@ import java.util.concurrent.CyclicBarrier;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
-@Problem(id = 1114, name = "print-in-order", className = "Foo", complexity = Complexity.EASY)
+@Problem(id = 1114,
+        name = "print-in-order",
+        className = "Foo",
+        complexity = Complexity.EASY,
+        resolution = Resolution.FAIR)
 public class Foo {
     private final CyclicBarrier firstBarrier;
     private final CyclicBarrier secondBarrier;

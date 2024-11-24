@@ -2,6 +2,7 @@ package ru.krotarnya.leetcode.problem.p0121;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>You are given an array prices where prices[i] is the price of a given stock on the ith day.</p>
@@ -9,7 +10,7 @@ import ru.krotarnya.leetcode.Problem;
  * future to sell that stock.</p>
  * <p>Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.</p>
  */
-@Problem(id = 121, name = "best-time-to-buy-and-sell-stock", complexity = Complexity.EASY)
+@Problem(id = 121, name = "best-time-to-buy-and-sell-stock", complexity = Complexity.EASY, resolution = Resolution.FAIR)
 public class Solution {
     public int maxProfit(int[] prices) {
         if (prices.length == 0) return 0;

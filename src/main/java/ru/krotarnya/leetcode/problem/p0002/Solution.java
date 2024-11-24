@@ -2,6 +2,7 @@ package ru.krotarnya.leetcode.problem.p0002;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 import ru.krotarnya.leetcode.common.ListNode;
 
 /**
@@ -12,7 +13,7 @@ import ru.krotarnya.leetcode.common.ListNode;
  */
 
 @SuppressWarnings("unused")
-@Problem(id = 2, name = "add-two-numbers", complexity = Complexity.MEDIUM)
+@Problem(id = 2, name = "add-two-numbers", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode first = new ListNode(0);

@@ -2,6 +2,7 @@ package ru.krotarnya.leetcode.problem.p0011;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>You are given an integer array height of length n.
@@ -12,7 +13,7 @@ import ru.krotarnya.leetcode.Problem;
  * <p>Notice that you may not slant the container.</p>
  */
 
-@Problem(id = 11, name = "container-with-most-water", complexity = Complexity.MEDIUM)
+@Problem(id = 11, name = "container-with-most-water", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public
 class Solution {
     @SuppressWarnings("unused")

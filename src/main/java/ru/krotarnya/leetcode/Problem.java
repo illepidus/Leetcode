@@ -15,7 +15,7 @@ public @interface Problem {
 
     Complexity complexity();
 
-    Resolution resolution() default Resolution.FAIR;
+    Resolution resolution();
 
     String className() default "Solution";
 }

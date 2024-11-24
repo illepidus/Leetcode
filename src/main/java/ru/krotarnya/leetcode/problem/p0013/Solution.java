@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>Given a roman numeral, convert it to an integer.</p>
@@ -12,7 +13,7 @@ import ru.krotarnya.leetcode.Problem;
  * <p>It is guaranteed that s is a valid roman numeral in the range [1, 3999]</p>
  */
 
-@Problem(id = 13, name = "roman-to-integer", complexity = Complexity.EASY)
+@Problem(id = 13, name = "roman-to-integer", complexity = Complexity.EASY, resolution = Resolution.FAIR)
 public class Solution {
     private static final Map<Character, Integer> ROMAN_MAP = Map.of(
             'I', 1,

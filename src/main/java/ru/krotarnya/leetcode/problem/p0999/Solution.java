@@ -2,10 +2,11 @@ package ru.krotarnya.leetcode.problem.p0999;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 
 @SuppressWarnings("unused")
-@Problem(id = 999, name = "available-captures-for-rook", complexity = Complexity.EASY)
+@Problem(id = 999, name = "available-captures-for-rook", complexity = Complexity.EASY, resolution = Resolution.FAIR)
 public class Solution {
     public int numRookCaptures(char[][] board) {
         Location rook = findRook(board);

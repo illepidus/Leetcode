@@ -2,8 +2,9 @@ package ru.krotarnya.leetcode.problem.p0704;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
-@Problem(id = 704, name = "binary-search", complexity = Complexity.EASY)
+@Problem(id = 704, name = "binary-search", complexity = Complexity.EASY, resolution = Resolution.FAIR)
 public class Solution {
     public int search(int[] nums, int target) {
         if (nums.length == 0) return -1;

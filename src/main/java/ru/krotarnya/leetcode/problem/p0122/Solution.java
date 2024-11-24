@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>You are given an integer array prices where prices[i] is the price of a given stock on the ith day.</p>
@@ -12,7 +13,10 @@ import ru.krotarnya.leetcode.Problem;
  * any time. However, you can buy it then immediately sell it on the same day.</p>
  * <p>Find and return the maximum profit you can achieve.</p>
  */
-@Problem(id = 122, name = "best-time-to-buy-and-sell-stock-ii", complexity = Complexity.MEDIUM)
+@Problem(id = 122,
+        name = "best-time-to-buy-and-sell-stock-ii",
+        complexity = Complexity.MEDIUM,
+        resolution = Resolution.FAIR)
 public class Solution {
     public int maxProfit(int[] prices) {
         if (prices.length <= 2) return maxProfitUnsafe(prices);

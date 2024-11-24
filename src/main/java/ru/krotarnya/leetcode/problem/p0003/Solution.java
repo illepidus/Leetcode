@@ -5,13 +5,17 @@ import java.util.Map;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * Given a string s, find the length of the longest
  * substring without repeating characters.
  */
 
-@Problem(id = 3, name = "longest-substring-without-repeating-characters", complexity = Complexity.MEDIUM)
+@Problem(id = 3,
+        name = "longest-substring-without-repeating-characters",
+        complexity = Complexity.MEDIUM,
+        resolution = Resolution.FAIR)
 public class Solution {
     public static int lengthOfLongestSubstring(String s) {
         int longest = 0;

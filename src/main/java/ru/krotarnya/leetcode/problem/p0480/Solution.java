@@ -9,6 +9,7 @@ import java.util.stream.IntStream;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle
@@ -22,7 +23,7 @@ import ru.krotarnya.leetcode.Problem;
  *
  * O(N, K) = (N - K) * log(K)
  */
-@Problem(id = 480, name = "sliding-window-median", complexity = Complexity.HARD)
+@Problem(id = 480, name = "sliding-window-median", complexity = Complexity.HARD, resolution = Resolution.FAIR)
 public class Solution {
     private TreeSet<Entry> leftSet;
     private TreeSet<Entry> rightSet;

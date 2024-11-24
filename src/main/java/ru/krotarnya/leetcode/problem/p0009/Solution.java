@@ -2,11 +2,12 @@ package ru.krotarnya.leetcode.problem.p0009;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * Given an integer x, return true if x is a palindrome, and false otherwise.
  */
-@Problem(id = 9, name = "palindrome-number", complexity = Complexity.EASY)
+@Problem(id = 9, name = "palindrome-number", complexity = Complexity.EASY, resolution = Resolution.FAIR)
 public class Solution {
     private static boolean isPalindrome(String x) {
         boolean res = true;

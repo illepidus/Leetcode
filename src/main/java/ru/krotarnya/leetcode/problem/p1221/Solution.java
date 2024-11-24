@@ -2,6 +2,7 @@ package ru.krotarnya.leetcode.problem.p1221;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>Balanced strings are those that have an equal quantity of 'L' and 'R' characters.</p>
@@ -9,7 +10,10 @@ import ru.krotarnya.leetcode.Problem;
  * <p>Each substring is balanced.</p>
  * <p>Return the maximum number of balanced strings you can obtain.</p>
  */
-@Problem(id = 1221, name = "split-a-string-in-balanced-strings", complexity = Complexity.EASY)
+@Problem(id = 1221,
+        name = "split-a-string-in-balanced-strings",
+        complexity = Complexity.EASY,
+        resolution = Resolution.FAIR)
 public class Solution {
     public static int balancedStringSplit(String s) {
         int balance = 0;

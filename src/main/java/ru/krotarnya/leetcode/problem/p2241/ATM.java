@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * Your ATM object will be instantiated and called as such:
@@ -17,7 +18,11 @@ import ru.krotarnya.leetcode.Problem;
  * int[] param_2 = obj.withdraw(amount);
  */
 
-@Problem(id = 2241, name = "design-an-atm-machine", className = "ATM", complexity = Complexity.MEDIUM)
+@Problem(id = 2241,
+        name = "design-an-atm-machine",
+        className = "ATM",
+        complexity = Complexity.MEDIUM,
+        resolution = Resolution.FAIR)
 public class ATM {
     private static final int[] REJECTED = new int[]{-1};
     private final Map<Banknote, Long> state;

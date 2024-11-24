@@ -2,13 +2,14 @@ package ru.krotarnya.leetcode.problem.p0012;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * <p>Given an integer, convert it to a roman numeral</p>
  * <p>1 <= num <= 3999</p>
  */
 
-@Problem(id = 12, name = "integer-to-roman", complexity = Complexity.MEDIUM)
+@Problem(id = 12, name = "integer-to-roman", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     @SuppressWarnings("PointlessArithmeticExpression")
     public static String intToRoman(int num) {

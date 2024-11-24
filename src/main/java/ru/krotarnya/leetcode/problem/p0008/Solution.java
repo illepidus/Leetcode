@@ -5,12 +5,13 @@ import java.util.regex.Pattern;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * Implement the myAtoi(string s) function, which converts a string
  * to a 32-bit signed integer (similar to C/C++'s atoi function).
  */
-@Problem(id = 8, name = "string-to-integer-atoi", complexity = Complexity.MEDIUM)
+@Problem(id = 8, name = "string-to-integer-atoi", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     public static int myAtoi(String s) {
         Matcher matcher = Pattern.compile("^\\s*(([-+])?\\d+).*$").matcher(s);

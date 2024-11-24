@@ -6,13 +6,14 @@ import java.util.Map;
 
 import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
+import ru.krotarnya.leetcode.Resolution;
 
 /**
  * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
  * Constraints: 1 <= n <= 8
  */
 
-@Problem(id = 22, name = "generate-parentheses", complexity = Complexity.MEDIUM)
+@Problem(id = 22, name = "generate-parentheses", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     public static final Map<Integer, List<String>> PRECALCULATED = Map.of(
             1,

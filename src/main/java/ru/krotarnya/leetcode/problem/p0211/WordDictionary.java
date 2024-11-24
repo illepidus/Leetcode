@@ -11,8 +11,11 @@ import ru.krotarnya.leetcode.Complexity;
 import ru.krotarnya.leetcode.Problem;
 import ru.krotarnya.leetcode.Resolution;
 
-@Problem(id = 211, name = "design-add-and-search-words-data-structure", complexity = Complexity.MEDIUM,
-        resolution = Resolution.TIMEOUT, className = "WordDictionary")
+@Problem(id = 211,
+        name = "design-add-and-search-words-data-structure",
+        complexity = Complexity.MEDIUM,
+        resolution = Resolution.TIMEOUT,
+        className = "WordDictionary")
 public class WordDictionary implements WordDict {
     private final Map<Integer, List<Map<Character, Set<String>>>> index;
     private final Map<Integer, Set<String>> dictionary;
