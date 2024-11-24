@@ -13,17 +13,17 @@
 | CopyOnWriteArraySet   | O(n)     | O(n)     | O(n)     | O(1) | Array                    |
 | ConcurrentSkipListSet | O(log n) | O(log n) | O(log n) | O(n) | Skip List                |
 
-| Queue                   | Offer    | Peak | Poll     | Remove | Size | Data Structure |
-|-------------------------|----------|------|----------|--------|------|----------------|
-| PriorityQueue           | O(log n) | O(1) | O(log n) | O(n)   | O(1) | Priority Heap  |
-| LinkedList              | O(1)     | O(1) | O(1)     | O(1)   | O(1) | Array          |
-| ArrayDequeue            | O(1)     | O(1) | O(1)     | O(n)   | O(1) | Linked List    |
-| ConcurrentLinkedQueue   | O(1)     | O(1) | O(1)     | O(n)   | O(n) | Linked List    |
-| ArrayBlockingQueue      | O(1)     | O(1) | O(1)     | O(n)   | O(1) | Array          |
-| PriorirityBlockingQueue | O(log n) | O(1) | O(log n) | O(n)   | O(1) | Priority Heap  |
-| SynchronousQueue        | O(1)     | O(1) | O(1)     | O(n)   | O(1) | None!          |
-| DelayQueue              | O(log n) | O(1) | O(log n) | O(n)   | O(1) | Priority Heap  |
-| LinkedBlockingQueue     | O(1)     | O(1) | O(1)     | O(n)   | O(1) | Linked List    |
+| Queue                 | Offer    | Peak | Poll     | Remove | Size | Data Structure |
+|-----------------------|----------|------|----------|--------|------|----------------|
+| PriorityQueue         | O(log n) | O(1) | O(log n) | O(n)   | O(1) | Priority Heap  |
+| LinkedList            | O(1)     | O(1) | O(1)     | O(1)   | O(1) | Array          |
+| ArrayDequeue          | O(1)     | O(1) | O(1)     | O(n)   | O(1) | Linked List    |
+| ConcurrentLinkedQueue | O(1)     | O(1) | O(1)     | O(n)   | O(n) | Linked List    |
+| ArrayBlockingQueue    | O(1)     | O(1) | O(1)     | O(n)   | O(1) | Array          |
+| PriorityBlockingQueue | O(log n) | O(1) | O(log n) | O(n)   | O(1) | Priority Heap  |
+| SynchronousQueue      | O(1)     | O(1) | O(1)     | O(n)   | O(1) | None!          |
+| DelayQueue            | O(log n) | O(1) | O(log n) | O(n)   | O(1) | Priority Heap  |
+| LinkedBlockingQueue   | O(1)     | O(1) | O(1)     | O(n)   | O(1) | Linked List    |
 
 | Map                   | Get      | ContainsKey | Data Structure           |
 |-----------------------|----------|-------------|--------------------------|
