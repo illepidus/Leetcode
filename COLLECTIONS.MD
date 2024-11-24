@@ -1,5 +1,3 @@
-Below are the Big O performance of common functions of different Java Collections.
-
 | List                 | Add  | Remove | Get  | Contains | Next | Data Structure |
 |----------------------|------|--------|------|----------|------|----------------|
 | ArrayList            | O(1) | O(n)   | O(1) | O(n)     | O(1) | Array          |
