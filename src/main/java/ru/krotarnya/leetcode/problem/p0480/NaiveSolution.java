@@ -2,6 +2,9 @@ package ru.krotarnya.leetcode.problem.p0480;
 
 import java.util.Arrays;
 
+/**
+ * O(N, K) = (N - K) * K * log(K)
+ */
 @SuppressWarnings("unused")
 public class NaiveSolution {
     public double[] medianSlidingWindow(int[] nums, int k) {

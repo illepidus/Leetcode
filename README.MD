@@ -151,6 +151,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Not accepted by leetcode due to timeout">TIMEOUT</td>
     </tr>
     <tr>
+        <td>480</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0480/Solution.java">sliding-window-median</a></td>
+        <td>HARD</td>
+        <td><a href="https://leetcode.com/problems/sliding-window-median/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>704</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0704/Solution.java">binary-search</a></td>
         <td>EASY</td>

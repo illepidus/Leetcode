@@ -2,8 +2,9 @@ package ru.krotarnya.leetcode.problem.p0480;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.IntStream;
 
 import ru.krotarnya.leetcode.Complexity;
@@ -18,13 +19,13 @@ import ru.krotarnya.leetcode.Problem;
  * <p>Return the median array for each window in the original array. Answers within 10<sup>-5</sup> of the actual
  * value will be
  * accepted.</p>
+ *
+ * O(N, K) = (N - K) * log(K)
  */
-@SuppressWarnings("DataFlowIssue")
 @Problem(id = 480, name = "sliding-window-median", complexity = Complexity.HARD)
 public class Solution {
-    private int k;
-    private PriorityQueue<Integer> leftQueue;
-    private PriorityQueue<Integer> rightQueue;
+    private TreeSet<Entry> leftSet;
+    private TreeSet<Entry> rightSet;
 
     public double[] medianSlidingWindow(int[] nums, int k) {
         if (k < 1) throw new IllegalArgumentException();
@@ -33,32 +34,38 @@ public class Solution {
                 .mapToDouble(i -> ((double) nums[i] + nums[i + 1]) / 2)
                 .toArray();
 
-        this.k = k;
-        this.leftQueue = new PriorityQueue<>(k, Comparator.reverseOrder());
-        this.rightQueue = new PriorityQueue<>(k, Integer::compareTo);
+        this.leftSet = new TreeSet<>(Entry.comparator);
+        this.rightSet = new TreeSet<>(Entry.comparator);
+        List<Entry> data = IntStream.range(0, nums.length).mapToObj(i -> new Entry(i, nums[i])).toList();
 
-        for (int i = 0; i < k; i++) leftQueue.add(nums[i]);
+        for (int i = 0; i < k; i++) leftSet.add(data.get(i));
         double[] result = new double[nums.length - k + 1];
-        result[0] = median();
+        result[0] = median(k);
 
         for (int i = 1; i < result.length; i++) {
-            int previous = nums[i - 1];
-            int current = nums[i + k - 1];
-            if (previous >= rightQueue.peek()) rightQueue.remove(previous);
-            else leftQueue.remove(previous);
-            if (current >= rightQueue.peek()) rightQueue.add(current);
-            else leftQueue.add(current);
-            result[i] = median();
+            Entry previous = data.get(i - 1);
+            Entry current = data.get(i + k - 1);
+            leftSet.remove(previous);
+            rightSet.remove(previous);
+
+            if (current.value >= rightSet.first().value()) rightSet.add(current);
+            else leftSet.add(current);
+            result[i] = median(k);
         }
 
         return result;
     }
 
-    private double median() {
-        while (!Set.of(leftQueue.size(), leftQueue.size() + 1).contains(rightQueue.size())) {
-            if (leftQueue.size() > rightQueue.size()) rightQueue.offer(leftQueue.poll());
-            else if (rightQueue.size() > leftQueue.size() + 1) leftQueue.offer(rightQueue.poll());
+    private double median(int k) {
+        while (!Set.of(leftSet.size(), leftSet.size() + 1).contains(rightSet.size())) {
+            if (leftSet.size() > rightSet.size()) rightSet.add(leftSet.removeLast());
+            else leftSet.add(rightSet.removeFirst());
         }
-        return (k % 2 == 1) ? rightQueue.peek() : ((double) leftQueue.peek() + (double) rightQueue.peek()) / 2;
+        return (k % 2 == 1) ? rightSet.first().value : (leftSet.last().value + rightSet.first().value) / 2;
+    }
+
+    private record Entry(int id, double value) {
+        private static final Comparator<Entry> comparator = Comparator.comparingDouble(Entry::value)
+                .thenComparingInt(Entry::id);
     }
 }
