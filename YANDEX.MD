@@ -21,7 +21,7 @@ hash table:
 - [ ] https://leetcode.com/problems/find-all-anagrams-in-a-string/
 
 queue/stack:
-- [ ] https://leetcode.com/problems/valid-parentheses/
+- [x] https://leetcode.com/problems/valid-parentheses/
 
 dfs/bfs:
 - [ ] https://leetcode.com/problems/number-of-islands/
