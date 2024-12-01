@@ -130,6 +130,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>56</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0056/Solution.java">merge-intervals</a></td>
+        <td>MEDIUM</td>
+        <td><a href="https://leetcode.com/problems/merge-intervals/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>100</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0100/Solution.java">same-tree</a></td>
         <td>EASY</td>
