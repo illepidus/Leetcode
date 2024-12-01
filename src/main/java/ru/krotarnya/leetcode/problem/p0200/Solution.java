@@ -10,7 +10,7 @@ import ru.krotarnya.leetcode.Resolution;
  * <p>An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may
  * assume all four edges of the grid are all surrounded by water.</p>
  */
-@Problem(id = 200, name = "number-of-islands", complexity = Complexity.EASY, resolution = Resolution.FAIR)
+@Problem(id = 200, name = "number-of-islands", complexity = Complexity.MEDIUM, resolution = Resolution.FAIR)
 public class Solution {
     char[][] land;
     int[][] landmarks;

@@ -44,7 +44,7 @@ sliding window:
 - [ ] https://leetcode.com/problems/longest-repeating-character-replacement/
  
 tree:
-- [ ] https://leetcode.com/problems/same-tree/
+- [x] https://leetcode.com/problems/same-tree/
 - [ ] https://leetcode.com/problems/symmetric-tree/
 - [ ] https://leetcode.com/problems/balanced-binary-tree/
 - [ ] https://leetcode.com/problems/path-sum-ii/

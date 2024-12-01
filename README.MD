@@ -123,6 +123,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>100</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0100/Solution.java">same-tree</a></td>
+        <td>EASY</td>
+        <td><a href="https://leetcode.com/problems/same-tree/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>109</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0109/Solution.java">convert-sorted-list-to-bina...</a></td>
         <td>MEDIUM</td>
@@ -153,7 +160,7 @@ This is mine little project created for solving leetcode problems just for lulz.
     <tr>
         <td>200</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0200/Solution.java">number-of-islands</a></td>
-        <td>EASY</td>
+        <td>MEDIUM</td>
         <td><a href="https://leetcode.com/problems/number-of-islands/">Leetcode</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
