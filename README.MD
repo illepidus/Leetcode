@@ -116,6 +116,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>23</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0023/Solution.java">merge-k-sorted-lists</a></td>
+        <td>HARD</td>
+        <td><a href="https://leetcode.com/problems/merge-k-sorted-lists/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>38</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0038/Solution.java">count-and-say</a></td>
         <td>MEDIUM</td>
@@ -176,6 +183,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0480/Solution.java">sliding-window-median</a></td>
         <td>HARD</td>
         <td><a href="https://leetcode.com/problems/sliding-window-median/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
+        <td>692</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0692/Solution.java">top-k-frequent-words</a></td>
+        <td>MEDIUM</td>
+        <td><a href="https://leetcode.com/problems/top-k-frequent-words/">Leetcode</a></td>
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>

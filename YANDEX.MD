@@ -1,5 +1,5 @@
 linked lists:
-- [ ] https://leetcode.com/problems/merge-k-sorted-lists/
+- [x] https://leetcode.com/problems/merge-k-sorted-lists/
 - [ ] https://leetcode.com/problems/linked-list-cycle/
 - [ ] https://leetcode.com/problems/add-two-numbers/
 - [ ] https://leetcode.com/problems/reverse-linked-list/
@@ -31,11 +31,11 @@ sort:
 - [ ] https://leetcode.com/problems/merge-intervals/
  
 heap/hash:
-- [ ] https://leetcode.com/problems/top-k-frequent-words/
+- [x] https://leetcode.com/problems/top-k-frequent-words/
 - [ ] https://leetcode.com/problems/top-k-frequent-elements/
  
 two pointers:
-- [ ] https://leetcode.com/problems/container-with-most-water/
+- [x] https://leetcode.com/problems/container-with-most-water/
 - [ ] https://leetcode.com/problems/partition-labels/
  
 sliding window:
