@@ -151,6 +151,13 @@ This is mine little project created for solving leetcode problems just for lulz.
         <td title="Solution totally satisfy constraints">FAIR</td>
     </tr>
     <tr>
+        <td>200</td>
+        <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0200/Solution.java">number-of-islands</a></td>
+        <td>EASY</td>
+        <td><a href="https://leetcode.com/problems/number-of-islands/">Leetcode</a></td>
+        <td title="Solution totally satisfy constraints">FAIR</td>
+    </tr>
+    <tr>
         <td>211</td>
         <td><a href="https://github.com/illepidus/Leetcode/blob/master/src/main/java/ru/krotarnya/leetcode/problem/p0211/WordDictionary.java">design-add-and-search-words...</a></td>
         <td>MEDIUM</td>

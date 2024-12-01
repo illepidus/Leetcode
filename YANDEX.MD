@@ -24,7 +24,7 @@ queue/stack:
 - [x] https://leetcode.com/problems/valid-parentheses/
 
 dfs/bfs:
-- [ ] https://leetcode.com/problems/number-of-islands/
+- [x] https://leetcode.com/problems/number-of-islands/
 - [ ] https://leetcode.com/problems/remove-invalid-parentheses/
  
 sort:
